@@ -8,8 +8,10 @@
 <body>
     <!--/*@thymesVar id="key" type=""*/-->
     <p th:text="'' + ${key} + '단 : ' " />
+
     <th:block th:each="num: ${#numbers.sequence(1,9)}">
         <p th:text="'' + ${key} + ' X  ' + ${num} + ' = ' + (${key}*${num})" />
     </th:block>
+
 </body>
 </html>
