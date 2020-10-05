@@ -21,6 +21,13 @@ public class guguController {
 
         return "gugub"; // html name
     }
+
+    @GetMapping("/front/gugu/{key}")
+    public String dispFrontGuguList(Model model, @PathVariable("key") int key) {
+        model.addAttribute("key", key);
+
+        return "front/guguFK";
+    }
 }
 
 
