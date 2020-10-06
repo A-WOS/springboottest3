@@ -32,13 +32,19 @@ public class guguController {
 
     // 2-1
     @GetMapping("/front/gugu/{key}")
-    public String guguFront(Model model, @PathVariable("key") int key){
+    public String guguFrontNonKey(Model model, @PathVariable("key") int key){
         model.addAttribute("key", key);
         return "frontEnd/guguFront";
     }
 
     // 2-2
-
+    @GetMapping("/back/gugu/{key}")
+    public String  guguBackNonKey(Model model, @PathVariable("key") int key){
+        List<guguDto> listGugudan = gcp.createDan2(key);
+        model.addAttribute("listGugudan", listGugudan);
+        model.addAttribute("key", key);
+        return "backEnd/guguBack";
+    }
 
 
 
