@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>guguFrontNonKey</title>
+</head>
+<body>
+    <!--/*@thymesVar id="key" type=""*/-->
+    <p th:text="'1단 ~ '+${key}+'단'"></p>
+    <th:block th:each="dan:${#numbers.sequence(1, key)}">
+        <th:block th:each="col:${#numbers.sequence(1,9)}">
+            <p th:text="${dan} + ' X ' + ${col} + ' = ' + ${dan} * ${col}"></p>
+        </th:block>
+    </th:block>
+
+</body>
+</html>
