@@ -6,6 +6,7 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
+
 public class guguDto {
     private int dan1;
     private int dan2;
