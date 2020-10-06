@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>guguBackNonKey</title>
+</head>
+<body>
+    <!--/*@thymesVar id="key" type=""*/-->
+    <p th:text="${key}+'단 '" />
+        <!--/*@thymesVar id="listgugudan" type=""*/-->
+        <th:block th:each="guGudan: ${listgugudan}">
+            <p> th:text="'' + ${guGudan.dan1} + ' X  ' + ${guGudan.dan2} + ' = ' + ${guGudan.result}" /></p>
+        </th:block>
+
+
+</body>
+</html>
