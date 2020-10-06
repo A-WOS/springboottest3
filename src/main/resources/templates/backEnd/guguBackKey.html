@@ -3,9 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>guguBackNonKey</title>
+    <title>guguBackSearchKey</title>
 </head>
 <body>
+    <!--/*@thymesVar id="key" type=""*/-->
+    <p th:text="${key}+'단 '" />
+        <!--/*@thymesVar id="listgugudan" type=""*/-->
+        <th:block th:each="guGudan: ${listgugudan}">
+            <th:block th:text="'' + ${guGudan.dan1} + ' X  ' + ${guGudan.dan2} + ' = ' + ${guGudan.result}" /></th:block>
+        </th:block>
 
 
 </body>
