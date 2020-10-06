@@ -40,12 +40,12 @@ public class guguComponent {
 
         // process
         // 1 ~ 입력받은 dan까지 돌릴예정.
-        for(int i = 1; i < dan; i++)
+        for(int i = 1; i <= dan; i++)
             for (int col = 1; col < 10; col++)
                 listgugu.add(guguDto.builder()
-                        .dan1(dan)
+                        .dan1(i)
                         .dan2(col)
-                        .result(dan * col)
+                        .result(i * col)
                         .build());
 
 
