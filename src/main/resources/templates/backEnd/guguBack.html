@@ -8,9 +8,9 @@
 <body>
     <!--/*@thymesVar id="key" type=""*/-->
     <p th:text="${key}+'단 '" />
-        <!--/*@thymesVar id="listgugudan" type=""*/-->
-        <th:block th:each="guGudan: ${listgugudan}">
-            <p> th:text="'' + ${guGudan.dan1} + ' X  ' + ${guGudan.dan2} + ' = ' + ${guGudan.result}" /></p>
+        <!--/*@thymesVar id="listGugudan" type=""*/-->
+        <th:block th:each="gugudan: ${listGugudan}">
+            <p th:text="'' + ${gugudan.dan1} + ' X  ' + ${gugudan.dan2} + ' = ' + ${gugudan.result}" /></p>
         </th:block>
 
 
