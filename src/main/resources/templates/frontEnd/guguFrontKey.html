@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>guguFrontSearchKey</title>
+</head>
+<body>
+    <!--/*@thymesVar id="key" type=""*/-->
+    <p th:text="${key}+'단 '"> </p>
+    <th:block th:each="col:${#numbers.sequence(1, 9)}">
+        <p th:text="${key} + ' X ' + ${col} + ' = ' +${key}*${col}"></p>
+    </th:block>
+
+</body>
+</html>
