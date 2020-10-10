@@ -1,6 +1,5 @@
-package com.example.springboottest3.component;
+package com.example.springboottest3.test.component;
 
-import com.example.springboottest3.dto.GugudanDto;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

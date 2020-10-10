@@ -1,18 +1,22 @@
-package com.example.springboottest3.controller;
+package com.example.springboottest3.test.controller;
 
-import com.example.springboottest3.component.guguComponent;
+import com.example.springboottest3.test.Dto.guguDto;
+import com.example.springboottest3.test.component.guguComponent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import com.example.springboottest3.Dto.guguDto;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.List;
 
 @Controller
 public class guguController {
     // Dependency Injection(DI) : 의존성 주입.
     // @Autowired를 이용하여 guguComponet객체를 사용.
-    @Autowired guguComponent gcp;
+    @Autowired
+    guguComponent gcp;
     // 1-1
     @GetMapping("/front/gugu")
     public String guguFrontIsKey(Model model, @RequestParam("key") int key){
